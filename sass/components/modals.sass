@@ -1,0 +1,176 @@
+@import "../abstracts/variables"
+@import "../components/buttons"
+
+
+
+// модальное окно для каталогов
+.modal-overlay 
+    display: none // Скрыто по умолчанию
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $overlay-bg
+    justify-content: center
+    align-items: center
+    z-index: 2
+
+.modal
+    display: flex
+    margin: auto
+    left: 132px
+    top: 100px
+    position: absolute
+    background-color: white
+    border-radius: 25px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    text-align: center
+    width: 253px
+    height: 195px
+    z-index: 4
+    padding: 5px 20px 0px 20px
+
+.modalWidth
+    height: 100%
+    width: 1347px
+    position: relative
+
+
+.filter-shopcatalog
+    margin-bottom: 15px
+.shop
+    display: flex
+    cursor: pointer
+    align-items: center
+    padding: 4px
+    border-radius: 4px
+    gap: 15px
+    &:hover
+        background-color: #D3D3D3
+    &__shop-name
+    text-align: center
+    font-family: sans-serif
+    &__shop-icon
+        width: 25px
+        height: 25px
+        border-radius: 5px
+    &__input-shop
+        width: 18px
+        height: 18px
+        margin-left: auto
+
+
+
+// модальное окно для категорий товаров
+.modal-overlay-prodcatalog
+    display: none; // Скрыто по умолчанию
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $overlay-bg
+    justify-content: center
+    align-items: center
+    z-index: 2
+
+.modal-prodcatalog
+    margin: auto
+    position: absolute
+    border-radius: 30px
+    background-color: white
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    text-align: center
+    width: 723px
+    height: 658px
+    z-index: 4
+    padding: 0px 30px 0px 30px
+    &__list-of-categories
+        display: flex
+        flex-flow: row wrap
+        padding: 3px
+        background-color: #fff
+        width: 100%
+
+.categories
+    display: flex
+    align-items: center
+    width: 323.5px
+    height: 36px
+    background-color: rgba(243, 243, 243, 1)
+    margin-bottom: 5px
+    margin-right: 5px
+    padding-left: 5px
+    padding-right: 5px
+    padding-top: 2px
+    border-radius: 10px
+    cursor: pointer
+    &:hover
+        color: $buttons-blue-overlay
+        background-color: $password-email-color
+
+.icon-categories
+    width: 30px
+    height: 30px
+    margin-right: 20px
+
+.name-categories
+    line-height: 36px
+    font-size: 14px
+
+.input-categories
+    margin-left: auto
+    width: 15px
+    height: 15px
+
+// модальное окно для входа в аккаунт
+.modal-login-text
+    text-align: center
+
+
+// Сторисы
+.sectionsForCard
+    &__stories 
+    position: relative
+    &_storiesOne
+        background: none
+        border: none
+        cursor: pointer
+    .img 
+        width: 100px // ширина изображения, измените по необходимости
+        height: auto
+        
+
+.overlay-stories 
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    display: none // Скрыт по умолчанию
+
+.modal-stories 
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: white
+    padding: 20px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    display: none // Скрыт по умолчанию
+
+.modal-content-stories 
+    position: relative
+
+.stories-close 
+    position: absolute
+    top: 10px
+    right: 10px
+    font-size: 24px
+    cursor: pointer
+
+.switch-content 
+    margin-top: 10px
+

@@ -1,0 +1,74 @@
+@import "../abstracts/variables"
+@import "../components/buttons"
+@import "../layout/header"
+
+
+.section-favourites
+    position: absolute
+    margin-top: 140px
+    width: 100%
+    &__container-section-favourites
+        display: flex
+        width: 1347px
+        margin-left: auto
+        margin-right: auto
+
+
+.categories-favourites
+    display: flex
+    flex-direction: column
+    width: 254px
+    height: 168px
+    background-color: $clouds
+    border-radius: 20px
+    font-size: 24px
+    padding: 10px 4px 10px 4px
+    &__label
+        font-weight: bold
+        text-align: start
+        padding: 10px 1px 0px 1px
+        cursor: pointer
+        &_products
+            padding: 12px 0px 12px 18px
+            background-color: $clouds
+            color: $main-white
+            border-radius: 15px 
+            &:hover
+                background-color: rgba(122, 122, 122, 1)
+        &_shops
+            padding: 12px 0px 12px 18px
+            background-color: $clouds
+            color: $main-white
+            border-radius: 15px 
+            &:hover
+                background-color: rgba(122, 122, 122, 1)
+
+.selected
+    background-color: rgba(122, 122, 122, 1)
+
+.market-sorting
+    margin-left: 23px
+    width: 1070px
+    min-height: 1000px
+    background-color: $main-color
+
+.sort-market
+    padding: 8px 0px 8px  20px
+    background-color: $clouds
+    width: 1070px
+    height: 341px
+    border-radius: 40px
+    margin-bottom: 33px
+
+.icon-sort
+    width: 45px
+    height: 45px
+    border-radius: 20%
+
+.name-market-sort
+    position: absolute
+    color: $main-white
+    font-size: 24px
+    font-weight: bold
+    margin-top: -42px
+    margin-left: 60px
