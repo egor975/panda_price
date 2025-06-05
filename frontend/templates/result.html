@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../static/icons/favicon_io/favicon-16x16.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/pages/auth.css" />
+    <link rel="stylesheet" href="../static/css/pages/basket.css" />
+    <link rel="stylesheet" href="../static/css/pages/favourites.css" />
+    <link rel="stylesheet" href="../static/css/pages/home.css" />
+    <link rel="stylesheet" href="../static/css/pages/result.css" />
+    <title>Panda Price Результат поиска</title>
+  </head>
+  <body>
+    <div class="container-favourites">
+      <header>
+        <div class="header">
+          <a href="index.html"
+            ><img class="logopanda" src="../static/img/Лого_Панда.png" alt=""
+          /></a>
+          <button class="shopcatalog">Каталог магазинов</button>
+          <div class="modal-overlay" id="modalOverlay">
+            <div class="modalWidth">
+              <div class="modal">
+                <div class="closeModalBtn">
+                  <button
+                    class="closeModalBtn__close-modal_shopcatalog"
+                    id="closeModal"
+                  >
+                    <img
+                      class="icon-close"
+                      src="../static/icons/free-icon-close-151882.png"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="filter-shopcatalog">
+                  <form action="">
+                    <label class="shop">
+                      <img
+                        class="shop__shop-icon"
+                        src="../static/icons/ozon_.png"
+                        alt=""
+                      />
+                      <div class="shop__shop-name">Ozon</div>
+                      <input
+                        class="shop__input-shop"
+                        type="checkbox"
+                        name="marketplace"
+                        value="ozon"
+                      />
+                    </label>
+                    <label class="shop">
+                      <img
+                        class="shop__shop-icon"
+                        src="../static/icons/wildberries.png"
+                        alt=""
+                      />
+                      <div class="shop__shop-name">Wildberries</div>
+                      <input
+                        class="shop__input-shop"
+                        type="checkbox"
+                        name="marketplace"
+                        value="wildberries"
+                      />
+                    </label>
+                    <label class="shop">
+                      <img
+                        class="shop__shop-icon"
+                        src="../static/icons/ya_market.png"
+                        alt=""
+                      />
+                      <div class="shop__shop-name">Яндекс Маркет</div>
+                      <input
+                        class="shop__input-shop"
+                        type="checkbox"
+                        name="marketplace"
+                        value="yandex"
+                      />
+                    </label>
+                  </form>
+                </div>
+                <button class="filters-confirm-btn" type="submit">
+                  Применить фильтры
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="search">
+            <button class="search__prodcatalog-btn" id="openModalProdcatalog">
+              Категории товаров
+            </button>
+            <div class="modal-overlay-prodcatalog" id="modalOverlayProdcatalog">
+              <div class="modal-prodcatalog">
+                <div class="closeModalBtn">
+                  <button
+                    class="closeModalBtn__close-modal_prodcatalog"
+                    id="closeModalProdcatalog"
+                  >
+                    <img
+                      class="icon-close"
+                      src="../static/icons/free-icon-close-151882.png"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="modal-prodcatalog__list-of-categories">
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/free-icon-magnifier-2866321 6.png"
+                      alt=""
+                    />
+                    <span class="name-categories">
+                      Искать по всем категориям
+                    </span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-смартфон-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Электроника</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-обувь-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Одежда и обувь</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-бытовая-техника-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Бытовая техника</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-игрушка-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Детские товары</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-инструменты-100 1.png"
+                      alt="" />
+                    <span class="name-categories">Строительство и ремонт</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-аптечка-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Аптека</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-книга-100 1.png"
+                      alt="" /><span class="name-categories">Книги</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-canister-100 1.png"
+                      alt="" /><span class="name-categories">Автотовары</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-нить-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Хобби и творчество</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-бриллиант-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Ювелирные украшения</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-канцелярские-товары-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Канцелярские товары</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-кувшин-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Антиквариат и коллекционирование</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-шампунь-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Бытовая химия и гигиена</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-роза-100 1.png"
+                      alt="" /><span class="name-categories">Дом и сад</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-парикмахерские-ножницы-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Красота и здоровье</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-футбольный-мяч-100 1.png"
+                      alt="" /><span class="name-categories">Спорт и отдых</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-вишня-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Продукты питания</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-собака-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Товары для животных</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-палатка-в-лесу-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Туризм, рыбалка, охота</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-мебель-100 1.png"
+                      alt="" /><span class="name-categories">Мебель</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-женские-часы-100 1.png"
+                      alt="" /><span class="name-categories">Аксессуары</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-женские-часы-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Музыка и видео</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-18+-100 1.png"
+                      alt="" />
+                    <span class="name-categories">Товары для взрослых</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-рука-вверх-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Цифровые товары</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-ps-контроллер-100 1.png"
+                      alt="" /><span class="name-categories"
+                      >Игры и консоли</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                  /></label>
+                  <label class="categories"
+                    ><img
+                      class="icon-categories"
+                      src="../static/icons/icons8-автомобиль-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Автомобили</span
+                    ><input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                  <label class="categories">
+                    <img
+                      class="icon-categories"
+                      src="../static/icons/icons8-джемпер-100 1.png"
+                      alt=""
+                    />
+                    <span class="name-categories">Одежда</span>
+                    <input
+                      type="checkbox"
+                      class="input-categories"
+                      name="input-categories"
+                      id=""
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="search-button">
+              <button class="search-button__btn">
+                <img
+                  class="search-button__icon"
+                  src="../static/icons/белая_лупа.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <form class="searchforms" action="">
+              <input
+                class="search__searchform"
+                type="text"
+                name="Поиск"
+                id="searchInput"
+                placeholder="Искать на Panda Price"
+              />
+            </form>
+          </div>
+          <form class="form-header" action="login.html">
+            <button class="circle btn-profile">
+              <img
+                class="icon__profile"
+                src="../static/icons/человек-белый.png"
+                alt=""
+              />
+              Профиль
+            </button>
+          </form>
+          <form class="form-header" action="favourites.html">
+            <button class="circle">
+              <img
+                class="icon__favourites"
+                src="../static/icons/сердце-белое.png"
+                alt=""
+              />
+              Избранное
+            </button>
+          </form>
+          <form class="form-header" action="basket.html" target="_blank">
+            <button class="circle">
+              <img
+                class="icon__basket"
+                src="../static/icons/корзина-белая.png"
+                alt=""
+              />
+              Корзина
+            </button>
+          </form>
+        </div>
+
+        <!-- модальное окно авторизации -->
+        <div class="modal-overlay" id="modalOverlayLogin" style="display: none">
+          <div class="modal-login">
+            <div class="authorization">
+              <button class="btn-close-auth" id="btn-close-auth">
+                <img
+                  class="icon-close"
+                  src="../static/icons/free-icon-close-151882.png"
+                  alt=""
+                />
+              </button>
+              <div class="authorization__text modal-login-text">
+                <h1 class="authorization__text_login-one text-entrance">
+                  Вход
+                </h1>
+                <p class="authorization__text_login-two text-entrance-two">
+                  Войдите, чтобы продолжить
+                </p>
+                <form action="" method="post">
+                  <!-- почта -->
+                  <div class="email">
+                    <img
+                      class="email__icon-email"
+                      src="../static/icons/mail-icon.png"
+                      alt="иконка почты"
+                    />
+                    <input
+                      class="email__input-email"
+                      type="email"
+                      placeholder="E-mail"
+                      name=""
+                      id=""
+                    />
+                  </div>
+                  <!-- пароль -->
+                  <div class="password">
+                    <img
+                      class="password__icon-password"
+                      src="../static/icons/password_icon.png"
+                      alt="иконка почты"
+                    />
+                    <input
+                      class="password__input-password"
+                      type="password"
+                      placeholder="Пароль"
+                      name="Пароль"
+                      id=""
+                    />
+                    <img
+                      class="icon-eye"
+                      src="../static/icons/open-eye.png"
+                      alt="иконка почты"
+                    />
+                  </div>
+                  <a class="authorization__notpassword" href="notpassword.html"
+                    >Забыли пароль?</a
+                  >
+                  <div class="enter">
+                    <a class="enter__btn-enter_link-login" href="#"
+                      ><button type="submit" class="enter__btn-enter">
+                        Войти
+                      </button></a
+                    >
+                  </div>
+                  <p class="authorization__text-rules">
+                    Авторизуясь, вы соглашаетесь с <br /><a
+                      class="authorization__text-rules_link"
+                      href="#"
+                      >правилами обработки персональных данных</a
+                    >
+                  </p>
+                  <p class="authorization__text-registration">
+                    Нет аккаунта?
+                    <a
+                      class="authorization__text-registration-link"
+                      href="register.html"
+                      >Зарегистрируйтесь</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section class="section-favourites">
+      <div class="section-favourites__container-section-favourites">
+        <div class="market-sorting-result">
+          <div class="sort-market-result">
+            <img
+              class="icon-sort"
+              src="../static/icons/wildberries.png"
+              alt=""
+            />
+            <div class="name-market-sort">Wildberries</div>
+            <div class="ozon-results"></div>
+          </div>
+          <div class="sort-market-result">
+            <img class="icon-sort" src="../static/icons/ozon_.png" alt="" />
+            <div class="name-market-sort">Ozon</div>
+            <div class="wildberries-results"></div>
+          </div>
+          <div class="sort-market-result">
+            <img class="icon-sort" src="../static/icons/ya_market.png" alt="" />
+            <div class="name-market-sort">Яндекс Маркет</div>
+            <div class="yandex-results"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../static/../static/js/slider.js"></script>
+    <script src="../static/../static/js/modals.js"></script>
+    <script src="../static/../static/js/animation.js"></script>
+  </body>
+</html>
